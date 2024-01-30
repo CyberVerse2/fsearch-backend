@@ -5,7 +5,7 @@ import AppError from "../../common/utils/appError.js";
 import { catchAsync } from "../../common/utils/errorHandler.js";
 
 
-export const getFacesFromImage = catchAsync(async (req, res) => {
+export const getFacesRegion = catchAsync(async (req, res) => {
   const { user } = req;
   const { imageUrl } = req.params;
   if (!imageUrl) {
@@ -24,8 +24,7 @@ export const getFacesFromImage = catchAsync(async (req, res) => {
   return AppResponse(res, 200, newImage, 'Face region data fetched successfully');
 });
 
-export const getFaceDetails = catchAsync(async (req, res) => {
-  const { user } = req;
+export const getFaceById = catchAsync(async (req, res) => {
   const { imageId } = req.params;
   if (!imageId) {
     throw new AppError('Please provide an image id', 400);
@@ -38,6 +37,7 @@ export const getFaceDetails = catchAsync(async (req, res) => {
 });
 
 export const storeFaces = catchAsync(async (req, res) => {
-  const { user } = req;
+  const { facesUrl } = req.body
+  if(!Array.isArray(facesUrl)) throw new AppError('Please provide an array of faces url', 400);
 });
 

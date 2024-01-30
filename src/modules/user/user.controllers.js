@@ -5,7 +5,7 @@ import AppError from '../../common/utils/appError.js';
 
 export const httpGetCurrentUser = catchAsync(async (req, res) => {
   const { user } = req;
-  const currentUser = await UserModel.findById(user.id);
+  const currentUser = await UserModel.findById(user.id).populate('images').sort({ createdAt: -1 });
   if (!currentUser) {
     throw new AppError('User not found', 404);
   }
