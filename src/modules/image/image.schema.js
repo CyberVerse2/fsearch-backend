@@ -13,7 +13,6 @@ const ImageSchema = new Schema({
     type: [String],
   },
   details: {
-    type: String,
     required: true
   }
 });

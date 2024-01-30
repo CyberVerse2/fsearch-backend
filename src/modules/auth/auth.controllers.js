@@ -2,7 +2,7 @@ import AppError from '../../common/utils/appError.js';
 import { AppResponse } from '../../common/utils/appResponse.js';
 import { catchAsync } from '../../common/utils/errorHandler.js';
 import { compareData } from '../../common/utils/helper.js';
-import { UserModel } from '../user/schemas/user.schema.js';
+import { UserModel } from '../user/user.schema.js';
 
 // Signup route
 export const httpSignUp = catchAsync(async (req, res) => {

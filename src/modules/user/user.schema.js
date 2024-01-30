@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { hashData } from '../../../common/utils/helper.js';
+import { hashData } from '../../common/utils/helper.js';
 
 const userSchema = new mongoose.Schema(
   {
