@@ -9,12 +9,12 @@ const ImageSchema = new Schema({
     type: String,
     required: true
   },
-  facesUrl: {
-    type: [String],
-  },
-  details: {
-    required: true
-  }
+  faces: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Face'
+    }
+  ]
 });
 
 export const ImageModel = model('Image', ImageSchema);
