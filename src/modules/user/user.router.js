@@ -7,5 +7,4 @@ export const userRouter = Router()
 userRouter.use(protect)
 
 userRouter.get("/me", httpGetCurrentUser)
-// userRouter.get('face')
 userRouter.patch("/me", httpUpdateUser)

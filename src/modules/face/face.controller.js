@@ -34,3 +34,15 @@ export const createFace = catchAsync(async (req, res) => {
 
   return AppResponse(res, 201, newFace, 'Face stored successfully');
 });
+
+export const getFaceById = catchAsync(async (req, res) => {
+  const { faceId } = req.params;
+  if (!faceId) {
+    throw new AppError('Please provide an Face id', 400);
+  }
+  const face = await FaceModel.findById(faceId);
+  if (!face) {
+    throw new AppError('face not found', 404);
+  }
+  return AppResponse(res, 200, face, 'face data fetched successfully');
+});
