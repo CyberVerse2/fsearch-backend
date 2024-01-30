@@ -21,6 +21,7 @@
     "bcrypt": "^5.1.1",
     "clarifai-nodejs-grpc": "^10.0.10",
     "class-validator": "^0.14.1",
+    "cloudinary": "^2.0.0",
     "compression": "^1.7.4",
     "connect-timeout": "^1.9.0",
     "cors": "^2.8.5",
