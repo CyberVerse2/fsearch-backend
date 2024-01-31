@@ -19,7 +19,7 @@ export const ENVIRONMENT = {
   },
   AUTH0: {
     AUDIENCE: process.env.AUTH0_AUDIENCE,
-    ISSUER_URL: process.env.AUTH0_ISSUER_URL
+    ISSUER_URL: process.env.AUTHO_ISSUER_URL
   },
   CLOUDINARY: {
     CLOUD_NAME: process.env.CLOUDINARY_CLOUD_NAME,
