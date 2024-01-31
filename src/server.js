@@ -41,7 +41,7 @@ app.use((req, res, next) => {
 /**
  * Initialize routes
  */
-app.use('/', apiRoutes);
+app.use('/api/v1', apiRoutes);
 
 // catch 404 and forward to error handler
 app.all(
