@@ -49,3 +49,7 @@ export const setCookie = (
     ...options,
   });
 };
+
+// export const getFaceDetails = (faceUrl) => {
+
+//  });
