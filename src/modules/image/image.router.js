@@ -8,6 +8,6 @@ export const imageRouter = Router();
 imageRouter.use(protect);
 
 imageRouter.get('/faces', getImageFaces)
-imageRouter.get('/:id', getImageById);
 imageRouter.post('/new', createNewImage);
+imageRouter.get('/:id', getImageById);
 
