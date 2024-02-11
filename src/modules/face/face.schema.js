@@ -10,11 +10,11 @@ const faceSchema = new Schema({
     type: [Number],
     required: true
   },
-  facesUrl: {
+  imageUrl: {
     type: String
   },
   details: {
-    required: true
+    required: false
   }
 });
 
