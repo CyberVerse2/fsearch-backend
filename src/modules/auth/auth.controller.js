@@ -7,10 +7,10 @@ import { UserModel } from '../user/user.schema.js';
 // Signup route
 export const httpSignUp = catchAsync(async (req, res) => {
   // Extract user data from request body
-  const { username, profilePic, email, password } = req.body;
+  const { username, profilePic, email, password, isTermsAccepted } = req.body;
 
   // Validate user data
-  if (!username || !profilePic || !email || !password) {
+  if (!username || !profilePic || !email || !password || !isTermsAccepted) {
     return res.status(400).json({ message: 'All fields are required' });
   }
 
@@ -25,7 +25,8 @@ export const httpSignUp = catchAsync(async (req, res) => {
     username,
     profilePic,
     email,
-    password
+    password,
+    isTermsAccepted
   });
   await newUser.save();
 

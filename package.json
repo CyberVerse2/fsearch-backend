@@ -11,9 +11,7 @@
     "format:fix": "prettier --write .",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "test": "node --experimental-vm-modules node_modules/.bin/jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test": "vitest"
   },
   "author": "",
   "license": "ISC",
@@ -43,9 +41,7 @@
   "devDependencies": {
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
-    "prettier": "^3.1.1"
-  },
-  "jest": {
-    "transform": {}
+    "prettier": "^3.1.1",
+    "vitest": "^1.2.2"
   }
 }
